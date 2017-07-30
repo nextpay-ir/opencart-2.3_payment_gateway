@@ -145,7 +145,7 @@ class ControllerExtensionPaymentNextpay extends Controller {
 				);
 				
 				$soap_client = new SoapClient("https://api.nextpay.org/gateway/verify.wsdl", array('encoding' => 'UTF-8'));
-				$res = $soap_client->PaymentVerification($this->params);
+				$res = $soap_client->PaymentVerification($params);
 
 				$res = $res->PaymentVerificationResult;
 				$code = -1000;
