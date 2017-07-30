@@ -155,7 +155,7 @@ class ControllerExtensionPaymentNextpay extends Controller {
 				}
 				
 				
-				if ($code == 0) 
+				if (intval($code) == 0)
 				{
 				  $data['continue'] = $this->url->link('checkout/success');
 				  $this->model_checkout_order->addOrderHistory($order_id, $this->config->get('nextpay_order_status_id'), 'کد ارجاع : '.$trans_id, true);
