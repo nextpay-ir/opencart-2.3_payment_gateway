@@ -14,7 +14,7 @@ class ControllerExtensionPaymentNextpay extends Controller {
 		
 		$amount = $this->currency->format($order_info['total'], $order_info['currency_code'], $order_info['currency_value'], false);
 		$amount = round($amount);
-		$amount = $this->currency->convert($amount, $order_info['currency_code'], "RLS");
+		//$amount = $this->currency->convert($amount, $order_info['currency_code'], "RLS");
 			
 		$data['order_id'] = $order_id;
 		$data['redirect_url']  =  ($this->url->link('extension/payment/nextpay/callback','', true));
@@ -115,7 +115,7 @@ class ControllerExtensionPaymentNextpay extends Controller {
 			
 			$amount = $this->currency->format($order_info['total'], $order_info['currency_code'], $order_info['currency_value'], false);
 			$amount = round($amount);
-			$amount = $this->currency->convert($amount, $order_info['currency_code'], "RLS");
+			//$amount = $this->currency->convert($amount, $order_info['currency_code'], "RLS");
 	
 			if ($order_info) 
 			{
